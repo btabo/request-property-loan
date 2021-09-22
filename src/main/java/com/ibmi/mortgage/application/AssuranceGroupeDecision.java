@@ -1,7 +1,7 @@
 package com.ibmi.mortgage.application;
 
-import com.ibmi.mortgage.domain.FormuleAssuranceEnum;
-import com.ibmi.mortgage.domain.Projet;
+import com.ibmi.mortgage.domain.entites.Projet;
+import com.ibmi.mortgage.domain.enums.FormuleAssuranceEnum;
 
 public interface AssuranceGroupeDecision {
 

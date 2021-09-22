@@ -1,4 +1,4 @@
-package com.ibmi.mortgage.domain;
+package com.ibmi.mortgage.domain.entites;
 
 public class AchatImmobilier {
 
