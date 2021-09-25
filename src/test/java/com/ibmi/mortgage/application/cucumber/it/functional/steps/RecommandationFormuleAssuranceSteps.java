@@ -1,12 +1,13 @@
 package com.ibmi.mortgage.application.cucumber.it.functional.steps;
 
-import com.ibmi.mortgage.application.AssuranceGroupeDecisionImpl;
+import com.ibmi.mortgage.application.AssuranceGroupeDecision;
 import com.ibmi.mortgage.application.cucumber.it.functional.GenericGlue;
 import com.ibmi.mortgage.application.cucumber.it.functional.model.EmprunteurCucumber;
 import com.ibmi.mortgage.domain.entites.Projet;
 import com.ibmi.mortgage.domain.enums.FormuleAssuranceEnum;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -16,7 +17,8 @@ public class RecommandationFormuleAssuranceSteps implements En {
 
     private Projet projet;
 
-    private AssuranceGroupeDecisionImpl assuranceGroupeDecision = new AssuranceGroupeDecisionImpl();
+    @Autowired
+    private AssuranceGroupeDecision assuranceGroupeDecision;
 
     private GenericGlue<FormuleAssuranceEnum> formuleAssuranceGlue = new GenericGlue<>();
 

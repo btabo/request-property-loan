@@ -4,7 +4,9 @@ import com.ibmi.mortgage.domain.entites.Emprunteur;
 import com.ibmi.mortgage.domain.entites.Projet;
 import com.ibmi.mortgage.domain.enums.FormuleAssuranceEnum;
 import com.ibmi.mortgage.domain.enums.StatutProfessonnelEnum;
+import com.ibmi.mortgage.domain.repo.EmprunteurRepository;
 import com.ibmi.mortgage.domain.vo.Csp;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import static com.ibmi.mortgage.domain.enums.FormuleAssuranceEnum.*;
@@ -12,6 +14,9 @@ import static com.ibmi.mortgage.domain.enums.StatutProfessonnelEnum.*;
 
 @Service
 public class AssuranceGroupeDecisionImpl implements AssuranceGroupeDecision {
+
+    @Autowired
+    private EmprunteurRepository emprunteurRepository;
 
     @Override
     public FormuleAssuranceEnum choisir(Projet projet) {
