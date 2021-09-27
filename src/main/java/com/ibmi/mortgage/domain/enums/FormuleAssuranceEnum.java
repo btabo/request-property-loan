@@ -11,7 +11,8 @@ public enum FormuleAssuranceEnum {
     DC_PTIA_IPT_ITT90("DC/PTIA/IPT-ITT90"),
     DC_PTIA_IPT_ITT30("DC/PTIA/IPT-ITT30"),
     DC_PTIA("DC/PTIA"),
-    DC("DC");
+    DC("DC"),
+    NA("N/A");
 
     private String libelleFormule;
 

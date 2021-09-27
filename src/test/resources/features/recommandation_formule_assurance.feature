@@ -15,7 +15,11 @@ Feature: Recommandation d'une formule d'assurance d'un crédit immobilier.
     Then la formule recommandée est "<formule>"
     Examples:
       | age | CSP | statutProfessionnel | formule              |
+      | 90  | 0   |                     | N/A                  |
+      | 80  | 0   |                     | DC                   |
+      | 65  | 0   |                     | DC/PTIA              |
+      | 30  | 22  | AUTRE               | DC/PTIA/IPT-ITT30    |
+      | 60  | 22  | SALARIE_PUBLIC      | DC/PTIA/IPT-ITT90    |
       | 30  | 22  | SALARIE_PRIVE       | DC/PTIA/IPT-ITT90/PE |
       | 60  | 22  | SALARIE_PRIVE       | DC/PTIA/IPT-ITT90/PE |
-      | 60  | 22  | SALARIE_PUBLIC      | DC/PTIA/IPT-ITT90    |
-      | 60  | 22  | SALARIE_PUBLIC      | DC/PTIA/IPT-ITT90    |
+

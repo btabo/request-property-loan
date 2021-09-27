@@ -4,8 +4,6 @@ public enum StatutProfessonnelEnum {
 
     SALARIE_PRIVE,
     SALARIE_PUBLIC,
-    TRAVAILLEUR_INDEPENDANT,
-    RETRAITE,
-    AUTRE
+    AUTRE;
 
 }

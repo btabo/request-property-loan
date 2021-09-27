@@ -5,6 +5,9 @@ import com.ibmi.mortgage.domain.enums.StatutProfessonnelEnum;
 import com.ibmi.mortgage.domain.vo.Csp;
 import lombok.Builder;
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
+
+import static java.util.Optional.ofNullable;
 
 @Data
 @Builder
@@ -24,7 +27,7 @@ public class EmprunteurCucumber {
         return Emprunteur.builder()
                 .age(this.age)
                 .csp(new Csp(this.csp))
-                .statutPro(StatutProfessonnelEnum.valueOf(this.statutProfessionnel))
+                .statutPro(ofNullable(this.statutProfessionnel).filter(StringUtils::isNotBlank).map(StatutProfessonnelEnum::valueOf).orElse(null))
                 .build();
     }
 }
