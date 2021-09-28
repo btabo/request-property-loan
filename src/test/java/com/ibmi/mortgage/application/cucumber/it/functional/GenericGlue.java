@@ -1,15 +1,13 @@
 package com.ibmi.mortgage.application.cucumber.it.functional;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 @Component
 @Scope("cucumber-glue")
-@Slf4j
 public class GenericGlue<T> {
 
 	private T result;
